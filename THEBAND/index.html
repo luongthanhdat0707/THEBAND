@@ -7,8 +7,10 @@
     <title>The Band</title>
     <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/lamborghini-282390.png" type="image/x-icon"/>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./assets/font/font-awesome-4.7.0/css/font-awesome.min.css">
+    
 
 </head>
 
@@ -22,7 +24,7 @@
                 <li><a href="#Tour">Tour</a></li>
                 <li><a href="#Contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                         <i class="nav-arrown-down ti-angle-down"></i>
                     </a>
@@ -37,6 +39,10 @@
             <!-- Begin: Button Search -->
             <div class="search-button">
                 <i class="search-icon ti-search"></i>
+            </div>
+
+            <div id="mobie-menu" class="menu-mobie-btn">
+                <i class="fa fa-bars"></i>
             </div>
             <!-- End: Button Search -->
         </div>
@@ -62,15 +68,15 @@
                     aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     commodo consequat.</p>
                 <div class="row content-band">
-                    <div class="column column-third center">
+                    <div class="column column-third s-col-full mt-16 center">
                         <p class="band-name">Name</p>
                         <img src="./assets/img/band/member1.jpg" alt="Name" class="band-img">
                     </div>
-                    <div class="column column-third center">
+                    <div class="column column-third s-col-full mt-16 center">
                         <p class="band-name">Name</p>
                         <img src="./assets/img/band/member1.jpg" alt="Name" class="band-img">
                     </div>
-                    <div class="column column-third center">
+                    <div class="column column-third s-col-full mt-16 center">
                         <p class="band-name">Name</p>
                         <img src="./assets/img/band/member1.jpg" alt="Name" class="band-img">
                     </div>
@@ -89,7 +95,7 @@
                     </ul>
                     <!-- Places -->
                     <div class="row places-list">
-                        <div class="column column-third">
+                        <div class="column column-third mt-16">
                             <img src="./assets/img/tour/tour1.jpg" alt="New York" class="places-img">
                             <div class="places-body">
                                 <h3 class="places-heading">New York</h3>
@@ -98,7 +104,7 @@
                                 <button class="places-btn js-buy-tickers">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="column column-third">
+                        <div class="column column-third mt-16">
                             <img src="./assets/img/tour/tour2.jpg" alt="New York" class="places-img">
                             <div class="places-body">
                                 <h3 class="places-heading">Paris</h3>
@@ -107,7 +113,7 @@
                                 <button class="places-btn js-buy-tickers">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="column column-third">
+                        <div class="column column-third mt-16">
                             <img src="./assets/img/tour/tour3.jpg" alt="New York" class="places-img">
                             <div class="places-body">
                                 <h3 class="places-heading">San Francisco</h3>
@@ -124,13 +130,13 @@
                 <h2 class="selection-heading">CONTACT</h2>
                 <p class="selection-sub-heading">Fan? Drop a note!</p>
                 <div class="row contact-content">
-                    <div class="column column-half contact-content-info">
+                    <div class="column column-half s-col-full contact-content-info">
                         <p><i class="ti-location-pin"></i>Chicago, US<p>                
                         <p><i class="ti-headphone"></i>Phone: +00 151515</p>                      
                         <p><i class="ti-email"></i>Email: mail@mail.com</p>
                     </div>
 
-                    <div class="column column-half contact-form">
+                    <div class="column column-half s-col-full contact-form">
                         <form action="">
                             <div class="row">
                                 <div class="column column-half">
@@ -167,7 +173,7 @@
                 <a href=""><i class="fa fa-linkedin"></i></a>
                 
             </div>
-            <p class="copy-right">Powered by <a href="">w3.css</a></p>
+            <p class="copy-right">Powered by <a href="https://www.w3schools.com/" target="_blank">w3.css</a></p>
         </div>
         <!-- End Footer -->
 
@@ -210,7 +216,7 @@
         const modal = document.querySelector('.js-modal')
         const modalClose = document.querySelector('.js-modal-close')
         const modalContainer = document.querySelector('.js-modal-container')
-
+        
         // Hiện thị modal (thêm class open vào modal)
         function showBuyTickets(){
             modal.classList.add('open')
@@ -234,6 +240,35 @@
         modalContainer.addEventListener('click',function(evnet){
             evnet.stopPropagation()
         })
+        
+        // đóng mờ menu mobie
+        var header = document.getElementById('header');
+        var mobieMenu = document.getElementById('mobie-menu');
+        var headerHight = header.clientHeight;
+        
+        mobieMenu.onclick = function(){
+            var isClose = header.clientHeight === headerHight;
+            if(isClose){
+                header.style.height = 'auto';
+            }else{
+                header.style.height = null;
+            }
+        }
+
+        // Tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(var i = 0; i <menuItems.length; i++){
+            var menuItem = menuItems[i];
+            
+            menuItem.onclick = function(checkNav){
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('morenav');
+                if(isParentMenu){
+                    checkNav.preventDefault();
+                }else{
+                    header.style.height = null;
+                }
+            }
+        }
 
     </script>
     

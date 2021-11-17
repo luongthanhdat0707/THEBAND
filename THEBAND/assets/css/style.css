@@ -20,7 +20,9 @@ html{
 .center{
     text-align: center !important;
 }
-
+.mt-16{
+    margin-top: 16px;
+}
 .row{
     margin-left: -8px;
     margin-right: -8px;
@@ -126,22 +128,37 @@ html{
 #nav .nav-arrown-down{
     font-size: 12px;
 }
+#header .menu-mobie-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
 
+#header .menu-mobie-btn,
 #header .search-button{
     float: right;
     padding: 0px 23.5px; 
+}
+#header .menu-mobie-btn:hover{
+    background-color: #ddd;
+}
+#header .menu-mobie-btn:hover .fa{
+    color: black;
 }
 
 #header .search-button:hover{
     background-color: #f44336;
     cursor: pointer;
 }
-
+#header .fa,
 #header .search-icon{
     color: #fff;
     font-size: 15px;
     line-height: 46px;
 }
+
+
  /* SLIDER */
 #slider{
     position: relative;
@@ -175,9 +192,12 @@ html{
 }
 #content .content-selection{
     width: 800px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0 112px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .selection-heading{
@@ -200,7 +220,7 @@ html{
     line-height: 1.5;
 }
 #content .content-band{
-    padding-top: 48px;
+    padding-top: 32px;
 }
 #content .band-name{
     font-size: 15px;
@@ -248,7 +268,7 @@ html{
 }
 /* Tour */
 .places-list{
-    margin-top: 32px;
+    margin-top: 16px;
 }
 .places-item {
     width: 33.33333%;

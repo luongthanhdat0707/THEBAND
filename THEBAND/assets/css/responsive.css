@@ -1,0 +1,46 @@
+@media (max-width: 739px){
+    #header .menu-mobie-btn{
+        display: block;
+    }
+    #header .search-icon{
+        display: none;
+    }
+    #header{
+        overflow: hidden;
+    }
+    #nav{
+        display: block;
+    }
+    #nav li a {
+        padding: 1px 24px;
+    }
+    #nav > li{
+        display: block;
+    }
+    #nav > li:first-child{
+        display: inline-block;
+    }
+    #nav .morenav{
+        position: initial;
+        background-color: #333;
+    }
+    #nav .morenav a{
+        color: #fff;
+        padding: 5px 41px;
+    }
+    
+    #content .band-img{
+        width: 60%;
+    }
+    .column-third{
+        width: 100%;
+    }
+    .contact-content-info{
+        font-size: 20px;
+        margin-bottom:16px
+    }
+    .s-col-full{
+        width: 100%;
+    }
+    
+}
