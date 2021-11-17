@@ -1,4 +1,13 @@
 @media (max-width: 739px){
+    .s-full-width,
+    .s-col-full{
+        width: 100% !important;
+    }
+    
+    .s-mt-8{
+        margin-top: 8px !important;
+    }
+    
     #header .menu-mobie-btn{
         display: block;
     }
@@ -39,8 +48,6 @@
         font-size: 20px;
         margin-bottom:16px
     }
-    .s-col-full{
-        width: 100%;
-    }
+    
     
 }

@@ -23,6 +23,9 @@ html{
 .mt-16{
     margin-top: 16px;
 }
+.mt-32{
+    margin-top: 32px;
+}
 .row{
     margin-left: -8px;
     margin-right: -8px;
