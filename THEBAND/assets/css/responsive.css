@@ -1,3 +1,38 @@
+/* Tablet */
+@media (min-width: 739px) and (max-width: 1023px){
+
+}
+
+/* Tablet and Mobie */
+@media (max-width: 1023px){
+    #nav .morenav a{
+        padding: 5px 12px;
+    }
+    .places-btn{
+        padding: 15px 16px;
+    }
+    .contact-content-info{
+        line-height: 2;
+    }
+    .contact-form .form-control{
+        padding: 14px;
+    }
+    .footer .img-footer{
+        font-size: 43px;
+    }
+    .footer .img-footer a{
+        margin: 0 8px;
+    }
+    .footer .copy-right a{
+        padding: 15px 0;
+        display: inline-block;
+    }
+    .contact-content-info{
+
+    }
+}
+
+/* Mobie */
 @media (max-width: 739px){
     .s-full-width,
     .s-col-full{
@@ -46,7 +81,7 @@
     }
     .contact-content-info{
         font-size: 20px;
-        margin-bottom:16px
+        margin-bottom: 32px;
     }
     
     

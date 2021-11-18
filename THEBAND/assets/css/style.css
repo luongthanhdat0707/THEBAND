@@ -406,6 +406,14 @@ html{
     width: 30px;
     display: inline-block;
 }
+.contact-content-info a{
+    color: #00e;
+    opacity: 0.6;
+}
+.contact-content-info a:hover{
+    opacity: 1;
+}
+
 .contact-form{
     font-size: 15px;
 }
